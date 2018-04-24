@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^property/', include('properties.urls')),
 
     url(r'^admin/', admin.site.urls),
+    url(r'message/',include('messenger.urls')),
 ]

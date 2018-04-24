@@ -1,0 +1,26 @@
+<!-- messenger/list.html -->
+{% extends "core/base.html" %}
+{% load humanize %}
+
+{% block page_title %} mes {% endblock page_title %}
+
+{% block page_header %}Our Messenges{% endblock page_header %}
+
+{% block content %}
+
+<div class="row">
+{% for mes in object_list %}
+    <div class="col">
+        <div class="card" style="width: 12rem;">
+            <div class="card-body">
+                <p>{{object.subject_char}}</p>
+                <p>{{object.message_text}}</p>
+                <p>{{date_time}}</p>
+                <p>{{email}}</p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock content %}
